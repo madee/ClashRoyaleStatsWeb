@@ -1,0 +1,16 @@
+{
+  "name": "clash-royale-stats-web",
+  "version": "1.0.0",
+  "description": "Web-based Clash Royale Statistics Tracker",
+  "scripts": {
+    "install-all": "cd server && npm install && cd ../client && npm install",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

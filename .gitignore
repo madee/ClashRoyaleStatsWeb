@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/build/
+
+# Environment files
+.env
+server/.env
+
+# Database
+*.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
