@@ -308,7 +308,6 @@
 }
 
 .member-row {
-  cursor: pointer;
   transition: background-color 0.2s;
 }
 
@@ -319,6 +318,17 @@
 .member-name {
   color: var(--gold-light);
   font-weight: 500;
+}
+
+.member-name.clickable {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: text-decoration-color 0.2s;
+}
+
+.member-name.clickable:hover {
+  text-decoration-color: var(--gold-light);
 }
 
 .members-summary {

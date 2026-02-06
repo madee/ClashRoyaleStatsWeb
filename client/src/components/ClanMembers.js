@@ -133,7 +133,7 @@ function ClanMembers({ members, warLog, currentWar, clanTag, onMemberClick }) {
     <div className="clan-members">
       <div className="members-header">
         <h2>Clan Members ({processedMembers.length} total)</h2>
-        <p className="hint">Double-click a row to view player stats</p>
+        <p className="hint">Click a member's name to view player stats</p>
       </div>
 
       <div className="members-table-container">
@@ -157,11 +157,10 @@ function ClanMembers({ members, warLog, currentWar, clanTag, onMemberClick }) {
             {processedMembers.map((member, index) => (
               <tr
                 key={member.tag}
-                onDoubleClick={() => onMemberClick(member.tag)}
                 className="member-row"
               >
                 <td>{index + 1}</td>
-                <td className="member-name">{member.name}</td>
+                <td className="member-name clickable" onClick={() => onMemberClick(member.tag)}>{member.name}</td>
                 <td className="number">{member.currentFame.toLocaleString()}</td>
                 <td className="number">
                   {member.avgFame >= 0 ? member.avgFame.toLocaleString() : '-'}
